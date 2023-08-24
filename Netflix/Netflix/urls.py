@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from kino.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/',HelloAPI.as_view()),
+    path('aktyorlar/',AktyorlarAPIView.as_view()),
+    path('aktyor/<int:son>/',AktyorAPIView.as_view()),
+    path('kinolar/',KinolarAPIView.as_view())
 ]

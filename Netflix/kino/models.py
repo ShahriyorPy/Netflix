@@ -36,7 +36,7 @@ class Izoh(models.Model):
     matn = models.TextField()
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     sana = models.DateField()
-    kino = models.PositiveSmallIntegerField()
+    kino = models.ForeignKey(Kino,on_delete=models.CASCADE)
     baho = models.PositiveSmallIntegerField()
 
     def __str__(self):
