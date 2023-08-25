@@ -13,4 +13,8 @@ class KinoSerializer(serializers.ModelSerializer):
         model = Kino
         fields = ['id','nom','janr','yil','aktyorlar']  # yoki "__all__"
 
-
+class TarifSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    nom = serializers.CharField()
+    narx = serializers.IntegerField()
+    davomiylik = serializers.CharField()

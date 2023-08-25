@@ -24,5 +24,8 @@ urlpatterns = [
     path('hello/',HelloAPI.as_view()),
     path('aktyorlar/',AktyorlarAPIView.as_view()),
     path('aktyor/<int:son>/',AktyorAPIView.as_view()),
-    path('kinolar/',KinolarAPIView.as_view())
+    path('kino/<int:son>/',KinoAPIView.as_view()),
+    path('kinolar/',KinolarAPIView.as_view()),
+    path('tariflar/',TariflarAPIView.as_view()),
+    path('tarif/<int:son>/',TarifAPIView.as_view())
 ]
